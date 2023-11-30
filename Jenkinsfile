@@ -3,13 +3,11 @@ pipeline
     agent any
     stages
     {
-        stage("Clone")
+        stage("Build")
         {   
             steps
             {
-                sh ' sudo rm -rf /var/lib/jenkins/workspace/Docker/* '
-                sh ' sudo git clone -b python https://github.com/bhargavi1101gm/jenkins.git
- '
+                git '
             }
         }
         stage("Build")
