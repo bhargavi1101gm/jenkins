@@ -1,16 +1,17 @@
 pipeline
 {
-    agent {
-        docker {
-            // Use Docker with a specific image
-            image 'myfirstimage:tag' // Replace with your Docker image and tag
-            args '-v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket for Docker inside Docker
-        }
-    }
+    agent any
+    
     stages
     {
         stage('Build')
         {   
+             docker 
+            {
+            // Use Docker with a specific image
+            image 'myfirstimage:tag' // Replace with your Docker image and tag
+            args '-v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket for Docker inside Docker
+            }
             steps
             {
                 // Checkout your source code repository
