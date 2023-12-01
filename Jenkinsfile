@@ -18,7 +18,7 @@ pipeline
             steps
             {
                 // Checkout your source code repository
-                git 'https://github.com/bhargavi1101gm/jenkins.git'  // Replace with your Git repository URL
+                git clone 'https://github.com/bhargavi1101gm/jenkins.git'  // Replace with your Git repository URL
                 // Build using Dockerfile
                 script 
                 {
